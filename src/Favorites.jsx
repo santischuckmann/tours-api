@@ -2,9 +2,9 @@ import React from 'react';
 
 const Favorites = ({favorites }) => {
   return (
-    <section>
-      <h3>{favorites.length !== 1 ? `${favorites.length} favorite places` : `${favorites.length} favorite place` } </h3>
-      <div className = "favoritesSection">
+    <section className="favoritesContainer">
+      <h3>My favorite tour</h3>
+      {favorites.length < 1 ? <h5 style={{margin: "2rem"}}>No favorites yet</h5> : <div className = "favoritesSection">
         {favorites.map((favorite) => {
           return (
           <div key = {favorite.id}>
@@ -13,7 +13,7 @@ const Favorites = ({favorites }) => {
           </div>
           )
         })}
-      </div>
+      </div>}    
     </section>
   )
 }

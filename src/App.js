@@ -22,10 +22,10 @@ function App () {
 
   const addFavorite = (id) => {
     const newFavorites = tours.filter((tour) => tour.id === id)
-    if (favorites <= 1) {
-    setFavorites (newFavorites)
+    if (favorites > 1) {
+    setFavorites ([...favorites, newFavorites])
     } else {
-      setFavorites ([...favorites, newFavorites])    
+      setFavorites (newFavorites)    
     }
   }
 
