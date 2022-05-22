@@ -155,6 +155,10 @@ main {
   width: 90vw;
   max-width: var(--fixed-width);
   margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .loading {
   text-align: center;
@@ -243,16 +247,15 @@ main {
 }
 
 .favoritesContainer {
-  width: 50vw; 
-  margin: 0 auto 2rem auto;
-  text-align: center;
+  width: max-content; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-.favoritesSection {
+.favorites {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -266,16 +269,18 @@ main {
   font-weight: 200;
 }
 
-.favoritesSection div {
+.favorites div {
   width: 100%
 }
-.favoritesSection img {
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
+
+.favorites img {
+  height: auto;
+  width: auto;
+  max-height: 5rem;
+  max-width: 5rem;
 }
 
-.favoritesSection div h5 {
+.favorites div h5 {
   font-weight: 200;
   margin: 1rem;
 }
@@ -287,11 +292,11 @@ main {
     width: 80vw;
   }
 
-  .favoritesSection {
+  .favorites {
     width: 100%;
   }
 
-  .favoritesSection div {
+  .favorites div {
     display: flex;
     flex-direction: row;
   }
